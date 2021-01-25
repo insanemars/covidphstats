@@ -1,0 +1,220 @@
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+body{
+background-color: #222222;
+height: 100vh;
+color: white;
+}
+
+img{
+ height: 100px;
+ width:  90px;
+ animation: rotate 3s ease-out 1,
+            move 3s ease-out 1;
+ margin-left: -10%;
+}
+
+@keyframes rotate{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes move {
+  0% {
+   margin-left: -100%;
+  }
+  50% {
+    margin-left: 5%;
+  }
+  100% {
+    margin-left: -10%;
+  
+  }
+}
+
+.jumbotron{
+ background-color:  transparent;
+ height: 180px;
+}
+
+.card{
+background: rgb(51,51,51);
+background: -moz-linear-gradient(147deg, rgba(51,51,51,1) 0%, rgba(82,82,82,1) 80%);
+background: -webkit-linear-gradient(147deg, rgba(51,51,51,1) 0%, rgba(82,82,82,1) 80%);
+background: linear-gradient(147deg, rgba(51,51,51,1) 0%, rgba(82,82,82,1) 80%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#333333",endColorstr="#525252",GradientType=1); 
+ background-size:cover;
+ backdrop-filter: blur(10px);
+}
+
+.card h6{
+ letter-spacing: 2px;
+}
+
+.card p{
+ font-size: 30px;
+ font-weight: bold;
+}
+
+.card span{
+ font-size: 17px;
+ letter-spacing: 1px;
+}
+
+.card .well{
+ letter-spacing: 1px;
+ border: 1px solid rgba(54, 162, 235, 1);
+ border-radius: 4px;
+ padding: 5px;
+ text-align: center;
+ font-size: 14px;
+}
+
+#newconfirmed, #newrecovered, #newdeaths{
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+#confirmed, #totalconfirmed{
+color: rgba(54, 162, 235, 1);
+}
+
+#recovered, #totalrecoveries, #recoveryrate, #globalrecoveryrate{
+color:rgba(75, 192, 192, 1);
+}
+
+#recoveryrate, #globalrecoveryrate{
+ font-size: 37px;
+}
+
+#active, #totalactive{
+color:rgba(255, 206, 86, 1);
+}
+
+#deaths, #totaldeaths{
+color: rgba(255, 99, 132, 1);
+}
+
+.share-button{
+ display: flex;
+ flex-direction: column;
+ padding: 15px;
+ margin-top: 0;
+ right: 0%;
+ width: .5in;
+ z-index: 1;
+ position: fixed;
+}
+
+.share-button a i{
+ font-size: 30px;
+}
+
+.share-button a{
+ margin: 8px -3px;
+ transition: .4s;
+}
+
+.share-button .fa-facebook{
+ color: #3b5998;
+}
+
+.share-button .fa-twitter{
+  color: #1da1f2;
+ }
+
+ .share-button .fa-whatsapp{
+  color: #25d366;
+ }
+
+ .share-button .fa-pinterest-p{
+  color: #e60023;
+ }
+
+ .share-button a:hover{
+  opacity: .5;
+ }
+
+footer{
+ padding: 10px;
+ color: white;
+ background-color:  #1f1f1f;
+ background-image: linear-gradient(147deg, #1f1f1f 0%, #434343 74%);
+ background-image: -moz-linear-gradient(147deg, #1f1f1f 0%, #434343 74%);
+ background-image: -webkit-linear-gradient(147deg, #1f1f1f 0%, #434343 74%);
+ bottom: 0;
+ width: 100%;
+}
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  img{
+   height: 60px;
+   width: 50px;
+   margin-left: 5%;
+   animation: none;
+  }
+
+  .jumbotron h1{
+   font-size: 25px;
+   height: 100px;
+  }
+
+  .card{
+   margin-bottom:10px;
+  }
+
+
+} 
+
+@media only screen and (min-width: 600px) {
+  img{
+    height: 100px;
+    width:  90px;
+   margin-left: -5%;
+   animation: none;
+  }
+
+  .jumbotron h1{
+   height: 140px;
+   font-size: 50px;
+  }
+
+  .card{
+   margin-bottom:10px;
+   margin-top: 10px;
+  }
+
+} 
+
+@media only screen and (min-width: 768px) {
+  img{
+    height: 100px;
+    width:  90px;
+   margin-left: 5%;
+   animation: none;
+  }
+
+} 
+
+
+@media only screen and (min-width: 992px) {
+  img{
+   animation: rotate 3s ease-out 1,
+   move 3s ease-out 1;
+   margin-left: -10%;
+
+  }
+} 
