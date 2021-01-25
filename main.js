@@ -3,7 +3,7 @@ let url = 'https://corona.lmao.ninja/v2/countries/Philippines?yesterday=true&str
 let url2 = 'https://disease.sh/v3/covid-19/all';
 let urlNews = 'https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=ph&apiKey=405799f77ea24f0398c978a33794a5f7';
 
-//Fetch 1
+
 phStats = () => {
 fetch(url)
     .then(response => response.json())
@@ -98,7 +98,7 @@ fetch(url)
 
 }
 
-//Fetch 2
+
 globalStats = () => {
 fetch(url2)
     .then(response => response.json())
@@ -140,16 +140,4 @@ fetch(url2)
 phStats();
 globalStats();
 
-   /* fetch(urlNews)
-    .then(response => response.json())
-    .then(data => {
-        news = document.querySelector('#news');
-        
 
-        news.innerHTML = "<h5 style='text-decoration: underline'>"+data.articles[15].title+"</h5><br><small>"+data.articles[15].author+"</small><small>"+data.articles[15].publishedAt+"</small><br><p id='newsblock' style='font-size:14px; letter-spacing:0px; font-weight:normal;'>"+data.articles[15].description+"</p><a target='_blank' href="+data.articles[15].url+"><span style='font-size:12px;letter-spacing:0px;'>More</span></a>";
-
-    })
-
-    .catch((error) => {
-        console.error('Error:', error)
-    });*/
